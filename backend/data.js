@@ -1,6 +1,7 @@
 const data = {
     products: [
         {
+            _id: '1',
             name: 'North Shore Oak Vinyl Longboards Flooring',
             slug: 'North Shore Oak Vinyl Longboards Flooring',
             category: 'Vinyl Plank Flooring',
@@ -13,6 +14,7 @@ const data = {
             description: '100% Waterproof and easy to clean, Easy-to-install lightweight planks. Features a rapid click-lock groove system',
         },
         {
+            _id: '2',
             name: 'Reefwood Vinyl Longboards Flooring',
             slug: 'Reefwood Vinyl Longboards Flooring',
             category: 'Vinyl Plank Flooring',
@@ -25,6 +27,7 @@ const data = {
             description: '100% Waterproof and easy to clean, Easy-to-install lightweight planks. Features a rapid click-lock groove system',
         },
         {
+            _id: '3',
             name: 'Oceanic Oak Vinyl Longboards Flooring',
             slug: 'Oceanic Oak Vinyl Longboards Flooring',
             category: 'Vinyl Plank Flooring',
@@ -37,6 +40,7 @@ const data = {
             description: '100% Waterproof and easy to clean, Easy-to-install lightweight planks. Features a rapid click-lock groove system',
         },
         {
+            _id: '4',
             name: 'Sandbar Oak Vinyl Longboards Flooring',
             slug: 'Sandbar Oak Vinyl Longboards Flooring',
             category: 'Vinyl Plank Flooring',

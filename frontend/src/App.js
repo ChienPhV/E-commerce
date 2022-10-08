@@ -30,7 +30,7 @@ function App() {
                   {
                     cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
-                        {cart.cartItems.length}
+                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                       </Badge>
                     )
                   }
@@ -38,7 +38,7 @@ function App() {
               </Nav>
             </Container>
           </Navbar>
-          {/* <Link to="/">Markets</Link> */}
+
         </header>
         <main>
           <Container className='mt-3'>
