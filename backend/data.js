@@ -6,7 +6,7 @@ const data = {
             category: 'Vinyl Plank Flooring',
             image: '/images/p1.jpg',
             price: 120,
-            countInStock: 10,
+            countInStock: 0,
             brand: 'CALI',
             rating: 4.5,
             numReviews: 10,
