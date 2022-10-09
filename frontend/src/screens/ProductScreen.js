@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useReducer, useState } from "react";
 import axios from 'axios';
 import logger from 'use-reducer-logger';
@@ -30,6 +30,7 @@ const reducer = (state, action) => {
 
 function ProductScreen() {
     const params = useParams();
+    const navigate = useNavigate();
     const { slug } = params;
     const [{ loading, error, product }, dispatch] = useReducer(logger(reducer), {
         product: [],
@@ -65,7 +66,8 @@ function ProductScreen() {
         ctxDispatch({
             type: 'CART_ADD_ITEM',
             payload: { ...product, quantity },
-        })
+        });
+        navigate('/cart');
     }
 
     return loading ? (
@@ -93,9 +95,9 @@ function ProductScreen() {
                             >
                             </Rating>
                         </ListGroup.Item>
-                        <ListGroup.Item>
+                        {/* <ListGroup.Item>
                             Price: ${product.price}
-                        </ListGroup.Item>
+                        </ListGroup.Item> */}
                         <ListGroup.Item>
                             Description: <p>{product.description}</p>
                         </ListGroup.Item>
