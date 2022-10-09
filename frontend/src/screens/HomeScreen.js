@@ -46,7 +46,7 @@ function HomeScreen() {
     }, []);
     return <div>
         <Helmet>
-            <title>Vienam Woodlands</title>
+            <title>Vietnam Woodlands</title>
         </Helmet>
         <h1>SPC Frooling - Made in Vietnam</h1>
         <div className="products">
