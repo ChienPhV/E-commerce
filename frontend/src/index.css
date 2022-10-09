@@ -14,7 +14,7 @@ main {
 }
 .btn-primary,
 .btn-outline-primary {
-  background-color: #cba72e;
+  background-color: #2e91cb;
   color: #000000;
 }
 .products {
@@ -53,8 +53,8 @@ main {
   color: #a0a0a0;
 }
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #f08000;
-  color: #f08000;
+  border-bottom: 0.2rem solid #0080f0;
+  color: #1c00f0e2;
 }
 
 /* sidebar */
