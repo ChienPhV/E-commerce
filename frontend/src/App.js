@@ -25,6 +25,7 @@ import axios from 'axios';
 import { getError } from './utils';
 import Button from 'react-bootstrap/esm/Button';
 import SearchBox from './components/SearchBox';
+import MapScreen from './screens/MapScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -65,7 +66,6 @@ function App() {
               : 'site-container d-flex flex-column'
         }
       >
-
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar bg='dark' variant='dark' expand="lg">
@@ -82,7 +82,7 @@ function App() {
                 </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav"> //humberger manu (mobile)
+              <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className='me-auto w-100 justify-content-end'>
                   <Link to="/Cart" className="nav-link">
@@ -167,10 +167,11 @@ function App() {
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
-              {/* <Route path="/search" element={<SearchScreen />} /> */}
+              <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/shipping" element={<ShippingAddressScreen />} />
+              <Route path="/map" element={<MapScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
               <Route path="/placeOrder" element={<PlaceOrderScreen />} />
               <Route path="/order/:id" element={<OrderScreen />} />

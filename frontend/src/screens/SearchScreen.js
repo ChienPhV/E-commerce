@@ -11,7 +11,8 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
 import Product from '../components/Product';
-import LinkContainer from 'react-router-bootstrap/LinkContainer';
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 const reducer = (state, action) => {
     switch (action.type) {
