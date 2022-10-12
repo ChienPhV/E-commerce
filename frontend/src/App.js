@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
@@ -65,8 +64,8 @@ function App() {
               ? 'site-container d-flex flex-column full-box'
               : 'site-container d-flex flex-column'
         }
-      ></div>
-      <div className='d-flex flex-column site-container'>
+      >
+
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar bg='dark' variant='dark' expand="lg">
