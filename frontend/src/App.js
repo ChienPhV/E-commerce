@@ -35,7 +35,9 @@ import MapScreen from './screens/MapScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminRoute from './components/AdminRoute';
 
+
 function App() {
+
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { fullBox, cart, userInfo } = state;
 

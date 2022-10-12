@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -14,6 +14,8 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+
+
 
 function reducer(state, action) {
     switch (action.type) {
@@ -308,12 +310,15 @@ export default function OrderScreen() {
                                             <LoadingBox />
                                         ) : (
                                             <div>
+
                                                 <PayPalButtons
                                                     createOrder={createOrder}
                                                     onApprove={onApprove}
                                                     onError={onError}
                                                 ></PayPalButtons>
+
                                             </div>
+
                                         )}
                                         {loadingPay && <LoadingBox></LoadingBox>}
                                     </ListGroup.Item>
