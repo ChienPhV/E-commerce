@@ -48,7 +48,7 @@ function HomeScreen() {
         <Helmet>
             <title>Vietnam Woodlands</title>
         </Helmet>
-        <h1>SPC Frooling - Made in Vietnam</h1>
+        <h1>SPC Flooring - Made in Vietnam</h1>
         <div className="products">
             {loading ? (<LoadingBox />) : error ? (<MessageBox variant="danger">{error}</MessageBox>) : (
                 <Row>
