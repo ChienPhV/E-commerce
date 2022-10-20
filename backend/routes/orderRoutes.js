@@ -142,10 +142,11 @@ orderRouter.put(
         .messages()
         .send(
           {
-            from: 'Amazona <amazona@mg.yourdomain.com>',
+            from: 'Vietnam Woodlands <phvchien@vietnamwoodlands.com>',
             to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
+            subject: 'Thanks for your purchasing!',
             html: payOrderEmailTemplate(order),
+
           },
           (error, body) => {
             if (error) {

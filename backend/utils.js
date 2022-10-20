@@ -44,11 +44,12 @@ export const isAdmin = (req, res, next) => {
 export const mailgun = () =>
     mg({
         apiKey: process.env.MAILGUN_API_KEY,
-        domain: process.env.MAILGUN_DOMIAN,
+        domain: process.env.MAILGUN_DOMAIN,
     });
 
+
 export const payOrderEmailTemplate = (order) => {
-    return `<h1>Thanks for shopping with us</h1>
+    return `<h1>Thanks for shopping with Vietnam Woodlands</h1>
   <p>
   Hi ${order.user.name},</p>
   <p>We have finished processing your order.</p>

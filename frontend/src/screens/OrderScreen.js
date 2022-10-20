@@ -14,8 +14,11 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+// import StripeCheckout from 'react-stripe-checkout';
 
 
+
+// const KEY = process.env.REACT_APP_STRIPE;
 
 function reducer(state, action) {
     switch (action.type) {
@@ -51,6 +54,7 @@ function reducer(state, action) {
     }
 }
 export default function OrderScreen() {
+
     const { state } = useContext(Store);
     const { userInfo } = state;
 
@@ -189,6 +193,7 @@ export default function OrderScreen() {
         }
     }
 
+
     return loading ? (
         <LoadingBox></LoadingBox>
     ) : error ? (
@@ -198,7 +203,7 @@ export default function OrderScreen() {
             <Helmet>
                 <title>Order {orderId}</title>
             </Helmet>
-            <h1 className="my-3">Order {orderId}</h1>
+            <h1 className="my-3">Order</h1>
             <Row>
                 <Col md={8}>
                     <Card className="mb-3">
@@ -305,12 +310,11 @@ export default function OrderScreen() {
                                     </Row>
                                 </ListGroup.Item>
                                 {!order.isPaid && (
-                                    <ListGroup.Item>
+                                    <><ListGroup.Item>
                                         {isPending ? (
                                             <LoadingBox />
                                         ) : (
                                             <div>
-
                                                 <PayPalButtons
                                                     createOrder={createOrder}
                                                     onApprove={onApprove}
@@ -318,10 +322,19 @@ export default function OrderScreen() {
                                                 ></PayPalButtons>
 
                                             </div>
-
                                         )}
+                                        {/* <StripeCheckout
+                                            name="Vietnam Woodlands"
+                                            billingAddress
+                                            shippingAddress
+                                            description={`Your total is $${order.totalPrice.toFixed(2)}`}
+                                            amount={order.totalPrice.toFixed(2) * 100}
+                                            stripeKey={KEY}
+                                        >
+                                            <Button type="button" style={{ width: 290 }} onClick={onApprove}>STRIPE CHECKOUT</Button>
+                                        </StripeCheckout> */}
                                         {loadingPay && <LoadingBox></LoadingBox>}
-                                    </ListGroup.Item>
+                                    </ListGroup.Item></>
                                 )}
                                 {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
                                     <ListGroup.Item>
