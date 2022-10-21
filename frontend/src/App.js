@@ -272,8 +272,36 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">© 2022. All copyrights belong to CHIENPV</div>
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+          <div className="container text-center">
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+              <div className="me-5 d-none d-lg-block">
+                {/* <span>Get connected with us on social networks:</span> */}
+                <small>&copy;2022. Copyright: Vietnam Woodlands</small>
+              </div>
+              <div>
+                <a href="" className="me-4 text-reset">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="" className="me-4 text-reset">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" className="me-4 text-reset">
+                  <i className="fab fa-google"></i>
+                </a>
+                <a href="" className="me-4 text-reset">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="" className="me-4 text-reset">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="" className="me-4 text-reset">
+                  <i className="fab fa-github"></i>
+                </a>
+              </div>
+            </section>
+
+          </div>
         </footer>
       </div>
     </BrowserRouter>
