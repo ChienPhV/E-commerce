@@ -50,7 +50,7 @@ function HomeScreen() {
         </Helmet>
         <h1>SPC Flooring - Made in Vietnam</h1>
 
-        <h5><a href="tel:0987331355">(084) 9666888</a></h5>
+        <h5><a href="tel:0987331355" style="text-decoration: none">(084) 9666888</a></h5>
         <h6>Call for FREE Samples & Expert Advice!</h6>
 
 
