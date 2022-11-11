@@ -8,7 +8,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-
 import Rating from '../components/Rating ';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
@@ -146,7 +145,7 @@ function ProductScreen() {
                                 numReviews={product.numReviews}
                             ></Rating>
                         </ListGroup.Item>
-                        <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
+                        {/* <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item> */}
                         <ListGroup.Item>
                             <Row xs={1} md={2} className="g-2">
                                 {[product.image, ...product.images].map((x) => (
