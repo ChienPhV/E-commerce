@@ -49,6 +49,11 @@ function HomeScreen() {
             <title>Vietnam Woodlands</title>
         </Helmet>
         <h1>SPC Flooring - Made in Vietnam</h1>
+
+        <h5><a href="tel:0987331355">(084) 9666888</a></h5>
+        <h6>Call for FREE Samples & Expert Advice!</h6>
+
+
         <div className="products">
             {loading ? (<LoadingBox />) : error ? (<MessageBox variant="danger">{error}</MessageBox>) : (
                 <Row>
